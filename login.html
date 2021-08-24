@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="loginstyle.css">
+
+    <title>Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script defer src="login.js"></script>
+</head>
+
+<body>
+
+  <ul id='navigation'>
+    <li class='navigation-About' style = "float:left"><a href='index.html'>return</a></li>
+ </ul>
+
+    <form id="form" action="registertest.html" class="signup-form" method="GET">
+      <h1> Login </h1>
+      <div id="error"></div>
+
+<div class="txtb">
+    <label for="email"></label>
+    <input id="email" name="email" type="email">
+    <span data-placeholder="Email"></span>
+</div>
+
+<div class="txtb">
+  <label for="password"></label>
+  <input id="password" name="password" type="password">
+  <span data-placeholder="Password"></span>
+</div>
+
+<input type="submit" class="signupbutton" value="Login">
+
+<div class="bottom-text">
+  Don't have an account? <a href='signup.html'>Sign up</a>
+</div>
+
+<div class = "footer">Copyright © 2020, Redwill.io, Inc. All Rights Reserved</div>
+
+<script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+      $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
+</form>
+</body>
+</html>
